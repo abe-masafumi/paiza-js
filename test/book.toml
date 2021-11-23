@@ -1,0 +1,6 @@
+[book]
+authors = ["masafumi"]
+language = "jp"
+multilingual = false
+src = "src"
+title = "Paiza"
