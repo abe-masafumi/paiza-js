@@ -8,3 +8,5 @@
 
 [Qiita マークダウン記法 一覧表・チートシート](https://qiita.com/tbpgr/items/989c6badefff69377da7)
 
+[WZ Markdown Editor マニュアル](https://www.wzsoft.jp/wzme/help/markdown.html)
+

@@ -2,7 +2,7 @@
 
 ---
 
-1. 文字列を大文字にする {#文字列を大文字にする}
+1. 文字列を大文字にする {#hand}
 
    ```js
    var text = "syncer";
@@ -10,14 +10,14 @@
    var upperCaseText = text.toUpperCase();
    ```
 
-1. 文字列の指定した文字を変更する
+2. 文字列の指定した文字を変更する
 
    ```js
    var str = "abcabc";
 
    console.log(str.replace("a", ""));
 
-   // "bcabc"(最初の'a'しか置換されない)
+   // "bcabc"(最初の'a'しか置換されない) 
    ```
 
    ```js
@@ -30,7 +30,7 @@
 
    <!-- [参考サイト](https://zukucode.com/2017/04/javascript-string-remove.html) -->
 
-1. 重複する文字列を取り除く
+3. 重複する文字列を取り除く
 
    ```js
    var str = "abcdabcd";
