@@ -4,15 +4,20 @@
 
 1. 改行しないでコンソール出力
 
-```js
-//文字列のみ
-process.stdout.write("hoge");
-process.stdout.write("hoge");
+   ```js
+   //文字列のみ
+   process.stdout.write("hoge");
+   process.stdout.write("hoge");
+   // hogehoge
+   ```
 
-// hogehoge
-```
+2. 配列内を指定した区切りで表示
 
-```js
-// 配列全体をスペース区切りで出力
-console.log(result.join(" "));
-```
+   ```js
+   tmp = tmp.join(",");//カンマ区切りで表示
+   console.log(tmp);
+   // a,b,c,d
+   tmp = tmp.replace(/,/g, " ");
+   console.log(tmp.trim()); //スペース区切りで表示
+   // a b c d
+   ```

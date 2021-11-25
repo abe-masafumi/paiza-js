@@ -6,25 +6,21 @@
 
    ```js
    var text = "syncer";
-
-   var upperCaseText = text.toUpperCase();
+   console.log(text.toUpperCase());
+   // SYNCER
    ```
 
 2. 文字列の指定した文字を変更する
 
    ```js
    var str = "abcabc";
-
    console.log(str.replace("a", ""));
-
-   // "bcabc"(最初の'a'しか置換されない) 
+   // "bcabc"(最初の'a'しか置換されない)
    ```
 
    ```js
    var str = "abcabc";
-
    console.log(str.split("a").join(""));
-
    // "bcbc"(全ての'a'が置換される)
    ```
 
@@ -35,11 +31,11 @@
    ```js
    var str = "abcdabcd";
    let tmp = str.split("");
+   console.log(tmp);
+   //['a', 'b', 'c','d', 'a', 'b','c', 'd']
    tmp = tmp.filter(function (x, i, self) {
      return self.indexOf(x) === i;
    });
-   tmp = tmp.join(",");
-   tmp = tmp.replace(/,/g, " ");
-
-   console.log(tmp.trim());
+   console.log(tmp);
+   // [ 'a', 'b', 'c', 'd' ]
    ```
