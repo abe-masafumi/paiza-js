@@ -15,6 +15,8 @@
 - [文字列の操作](./string_1.md)
   
 - [console出力](./console.md)
+
+- [calculation](./calculation.md)
   
 
    <!-- 1. [文字列を大文字にする]() -->
