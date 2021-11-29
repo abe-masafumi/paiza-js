@@ -39,3 +39,16 @@
    console.log(tmp);
    // [ 'a', 'b', 'c', 'd' ]
    ```
+
+1. 正規表現でポート番号と一致しているか
+
+   [参考資料1](https://rightcode.co.jp/blog/information-technology/javascript-regularexpression)
+   [参考資料2](https://javascript.programmer-reference.com/js-regexp-sample/)
+   
+```js
+var num = "192.168.0.1";
+
+let regexp = RegExp(/^\d{1,3}(\.\d{1,3}){3}$/,"g");
+let result = regexp.test(num);
+console.log(result); // => true
+```

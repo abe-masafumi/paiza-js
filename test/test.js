@@ -1,7 +1,5 @@
-var num = 123.456;
+var num = "192.168.0.1";
 
-console.log(Math.ceil(num));
-// 124
-
-console.log(Math.ceil(num * 10) / 10);
-// 124
+let regexp = RegExp(/^\d{1,3}(\.\d{1,3}){3}$/,"g");
+let result = regexp.test(num);
+console.log(result); // => true
