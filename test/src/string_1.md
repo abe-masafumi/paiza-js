@@ -40,15 +40,30 @@
    // [ 'a', 'b', 'c', 'd' ]
    ```
 
-1. 正規表現でポート番号と一致しているか
+4. 正規表現でポート番号と一致しているか
 
-   [参考資料1](https://rightcode.co.jp/blog/information-technology/javascript-regularexpression)
-   [参考資料2](https://javascript.programmer-reference.com/js-regexp-sample/)
-   
-```js
-var num = "192.168.0.1";
+   [参考資料 1](https://rightcode.co.jp/blog/information-technology/javascript-regularexpression)
 
-let regexp = RegExp(/^\d{1,3}(\.\d{1,3}){3}$/,"g");
-let result = regexp.test(num);
-console.log(result); // => true
-```
+   [参考資料 2](https://javascript.programmer-reference.com/js-regexp-sample/)
+   URL,郵便番号（999-9999 形式）, IP（999.999.999.999 形式）の参考例
+
+   ```js
+   var num = "192.168.0.1";
+
+   let regexp = RegExp(/^\d{1,3}(\.\d{1,3}){3}$/, "g");
+   let result = regexp.test(num);
+   console.log(result); // => true
+   ```
+
+5. 正規表現でメールアドレスかチェック
+
+   ```js
+   var email = "masa455.wv@gmail.com";
+   let regexp = RegExp(/.+@.+\.com+/, "g");
+   let result = regexp.test(email);
+   let match = email.match(regexp);
+   console.log(result);
+   // true
+   console.log(match);
+   //[ 'masa455.wv@gmail.com' ]
+   ```
