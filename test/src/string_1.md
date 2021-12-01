@@ -42,6 +42,8 @@
 
 4. 正規表現でポート番号と一致しているか
 
+   [正規表現 MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+
    [参考資料 1](https://rightcode.co.jp/blog/information-technology/javascript-regularexpression)
 
    [参考資料 2](https://javascript.programmer-reference.com/js-regexp-sample/)

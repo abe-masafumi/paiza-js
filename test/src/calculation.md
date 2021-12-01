@@ -65,3 +65,50 @@
    console.log(Math.floor(num * 10) / 10);
    // 123.4
    ```
+
+1. 小数点を指定して出力
+
+   ```js
+   var n = 12345.6789;
+   // 以下繰上げ
+   console.log(n.toFixed());
+   // 12346
+   console.log(n.toFixed(2));
+   // 12345.68
+   ```
+
+1. 負の数を正の数に変換
+
+   ```js
+   console.log(Math.abs(-1));
+   // 1
+   ```
+
+1. 小数点以下のみを取得
+
+   ```js
+   function getAfterPoint(num) {
+     var arr = String(num).split(".");
+
+     // 小数点以下がある場合と、ない場合
+     if (arr[1]) {
+       // 先頭に '0.' をつける
+       return Number("0." + arr[1]);
+     } else {
+       return 0; // 小数点以下がない場合は0を返す
+     }
+   }
+   ```
+
+1. ２つの座標の距離の計算
+
+   ```js
+   var x1 = 20;
+   var y1 = 10;
+   var x2 = 25;
+   var y2 = 10;
+
+   var a = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+   console.log(a);
+   // 5
+   ```
