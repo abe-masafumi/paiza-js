@@ -19,6 +19,11 @@
   // console.log(array)
   ```
 
+  ```js
+  // mapを使って全ての配列を分解
+  const array = lines.map((line) => line.split(" ").map(Number));
+  ```
+
 ---
 
 - 合格しなかった問題

@@ -112,3 +112,32 @@
    console.log(a);
    // 5
    ```
+
+1. 三角関数(Math.sin, Math.cos, Math.tan, etc)
+
+   ```js
+   //sinを求める
+   console.log(Math.sin(Math.PI / 6)); // Math.PI/6 = 30°
+   // 0.49999999999999994
+
+   console.log(Math.sin(Math.PI / 4)); // Math.PI/4 = 45°
+   // 0.7071067811865475
+   ```
+
+   ```js
+   // cosを求める
+   console.log(Math.cos(Math.PI / 3)); // Math.PI/3 = 60°
+   // 0.5000000000000001
+
+   console.log(Math.cos(Math.PI / 4)); // Math.PI/4 = 45°
+   // 0.7071067811865476
+   ```
+
+   ```js
+   // tanを求める
+   console.log(Math.tan(Math.PI / 3)); // Math.PI/3 = 60°
+   // 1.7320508075688767
+
+   console.log(Math.tan(Math.PI / 4)); // Math.PI/4 = 45°
+   // 0.9999999999999999
+   ```
