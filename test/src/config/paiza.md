@@ -92,6 +92,10 @@
 
    > Math.round()が切り捨てになる(バグ？)
 
+   > 解決
+
+   > 四捨五入するタイミングが間違っていた 
+
    ```js
    process.stdin.resume();
    process.stdin.setEncoding("utf8");
