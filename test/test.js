@@ -19,46 +19,24 @@
 
 // --ダーツ終わり--
 
-// 🤗次回のpaiza会
-// C010:安息の地を求めて
 
-// 提出前動作確認の入力値
-const lines = new Array(5)
-lines[0] = "20 10 10"
-lines[1] = "3"
-lines[2] = "25 10"
-lines[3] = "20 15"
-lines[4] = "70 70"
+const arr = [40, 30, 20, 10]
+// indexOf
+if (arr.indexOf(20) !== -1) {
+  console.log(arr.indexOf(20))
+  // 2
+}
+if (arr.indexOf(50) === -1) {
+  console.log(arr.indexOf(50))
+  // -1
+}
 
-
-// process.stdin.resume();
-// process.stdin.setEncoding('utf8');
-// // 自分の得意な言語で
-// // Let's チャレンジ！！
-// var lines = [];
-// var reader = require('readline').createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
-// reader.on('line', (line) => {
-//   lines.push(line);
-// });
-// reader.on('close', () => {
-    const lines0 = lines[0].split(" ");
-    let array = [];
-    for (let i = 2; i < lines.length; i++) {
-      array.push(lines[i].split(" "));
-    }
-    var x1 = Number(lines0[0]);
-    var y1 = Number(lines0[1]);
-    for (let i = 0;i< lines[1];i++) {
-        var a = Math.sqrt(Math.pow(Number(array[i][0])-x1,2) + Math.pow(Number(array[i][1])-y1,2));
-        if (a >= Number(lines0[2])) {
-            console.log('silent')
-        } else {
-            console.log('noisy')
-        }
-    }
-// });
-
-
+// includes
+if (arr.includes(20)) {
+  console.log(arr.includes(20))
+  // true
+}
+if (!arr.includes(50)) {
+  console.log(arr.includes(50))
+  // false
+}

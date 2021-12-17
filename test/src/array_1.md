@@ -10,9 +10,7 @@
     // [ '1000', '2000', '3000' ]
     ```
 
-
-
-4.  二次元配列の行列を転置
+2.  二次元配列の行列を転置
 
     ```js
     array = [
@@ -26,7 +24,7 @@
     // [ [ 1, 1, 1 ], [ 2, 2, 2 ], [ 3, 3, 4 ] ]
     ```
 
-5.  配列の中から最小値と最大値を取得
+3.  配列の中から最小値と最大値を取得
 
     ```js
     let array = [1, 2, 3, 4, 5, 6, 7];
@@ -37,7 +35,7 @@
     // [ 1, 7 ]
     ```
 
-6.  配列の中から最大値トップ 3 を取得
+4.  配列の中から最大値トップ 3 を取得
 
     ```js
     const point = [1, 2, 3, 4, 5, 6, 7];
@@ -57,7 +55,7 @@
     // [ 7, 6, 5, 4 ]
     ```
 
-7.  array.splice の使い方
+5.  array.splice の使い方
 
     ```js
     const months = ["Jan", "March", "April", "June"];
@@ -70,4 +68,29 @@
     arr.push(String(months.splice(3, 1, "May"))); // 値のタイプを指定するとpush時に綺麗な配列ができる
     console.log(months); // [ 'Jan', 'Feb', 'April', 'May' ]
     console.log(arr); // [ 'March', 'June' ]
+    ```
+
+6.  配列に特定要素が含まれるか
+
+    ```js
+    const arr = [40, 30, 20, 10];
+    // indexOf
+    if (arr.indexOf(20) !== -1) {
+      console.log(arr.indexOf(20));
+      // 2
+    }
+    if (arr.indexOf(50) === -1) {
+      console.log(arr.indexOf(50));
+      // -1
+    }
+
+    // includes
+    if (arr.includes(20)) {
+      console.log(arr.includes(20));
+      // true
+    }
+    if (!arr.includes(50)) {
+      console.log(arr.includes(50));
+      // false
+    }
     ```
