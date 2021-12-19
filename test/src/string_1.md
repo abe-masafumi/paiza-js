@@ -49,6 +49,12 @@
    [参考資料 2](https://javascript.programmer-reference.com/js-regexp-sample/)
    URL,郵便番号（999-9999 形式）, IP（999.999.999.999 形式）の参考例
 
+   [IP アドレス(IPv4)の正規表現](https://www.javadrive.jp/regex-basic/sample/index4.html)
+
+   [正規表現いろいろ](https://www.megasoft.co.jp/mifes/seiki/index.html)
+
+   [正規表現チート](https://murashun.jp/article/programming/regular-expression.html)
+
    ```js
    var num = "192.168.0.1";
 
@@ -68,4 +74,58 @@
    // true
    console.log(match);
    //[ 'masa455.wv@gmail.com' ]
+   ```
+
+6. 文字列の中に指定した文字列が何回出現するかを数えてその全ての index を配列で返す
+
+   ```js
+   var num = "192.168.[0-100].]";
+   //(記号の検索には不向き)
+   function lookingforindexall(str, txt) {
+     let index = 0;
+     const arr = [];
+     var count = (str.match(new RegExp(txt, "g")) || []).length;
+     console.log(`[${txt}]の出現回数は[${count}]回`);
+     for (let i = 0; i < count; i++) {
+       index = num.indexOf(txt, index);
+       arr.push(index);
+       index++;
+     }
+     return arr;
+   }
+   console.log(lookingforindexall(num, 1));
+   // [1]の出現回数は[3]回
+   // [ 0, 4, 11 ]
+   ```
+
+1. 文字列の中に指定した値がいくつ含まれているか
+   
+   ```js
+   var num = "192.168.[0-100].]";
+   //(記号検索も可能)
+   function occurrences(string, subString, allowOverlapping) {
+     string += "";
+     subString += "";
+     if (subString.length <= 0) return string.length + 1;
+     var n = 0,
+       pos = 0,
+       step = allowOverlapping ? 1 : subString.length;
+     while (true) {
+       pos = string.indexOf(subString, pos);
+       if (pos >= 0) {
+         ++n;
+         pos += step;
+       } else break;
+     }
+     return n;
+   }
+
+   console.log(occurrences(num, "]"));
+   // 2
+   console.log(occurrences("foofoofoo", "foo"));
+   // 3
+   console.log(occurrences("foofoofoo", "foofoo"));
+   // 1
+   console.log(occurrences("foofoofoo", "foofoo", true));
+   // 2
    ```

@@ -4,7 +4,7 @@
 
 1.  配列内の文字列を区切り方を指定して文字列に変換
 
-    ```js
+    ```jsF
     let ary = ["1000 2000 3000"];
     console.log(ary[0].split(" "));
     // [ '1000', '2000', '3000' ]
@@ -74,7 +74,9 @@
 
     ```js
     const arr = [40, 30, 20, 10];
+
     // indexOf
+
     if (arr.indexOf(20) !== -1) {
       console.log(arr.indexOf(20));
       // 2
@@ -85,6 +87,7 @@
     }
 
     // includes
+
     if (arr.includes(20)) {
       console.log(arr.includes(20));
       // true
