@@ -24,6 +24,18 @@
   const array = lines.map((line) => line.split(" ").map(Number));
   ```
 
+  > 連想配列を使って使いやすいようにする
+
+  ```js
+  const Datalist = new Object();
+  Datalist["config"] = lines[0].split(" ")
+  Datalist["data"] = {}
+  for (let i = 1; i < lines.length; i++) {
+    Datalist["data"][i-1] = lines[i].split(" ")
+  }
+  console.log(Datalist)
+  ```
+
 ---
 
 - 合格しなかった問題
@@ -94,7 +106,7 @@
 
    > 解決
 
-   > 四捨五入するタイミングが間違っていた 
+   > 四捨五入するタイミングが間違っていた
 
    ```js
    process.stdin.resume();
