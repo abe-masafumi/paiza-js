@@ -55,6 +55,11 @@
    }
    ```
 
+  > for_ofでkeyも取得する方法
+
+  [参考資料](https://1-notes.com/javascript-for-of-key-and-value/)
+
+
 1. 連想配列に配列を追加(pushが使える)
 
    ```js
@@ -64,3 +69,28 @@
    Datalist["results"] = [];
    Datalist["results"][i]={"day": Datalist["data"][i][0] ,"abe": count }
    ```
+
+1. 連想配列のmap処理
+
+    ```js
+    [
+      { day: '19', abe: 60 },
+      { day: '20', abe: 90 },
+      { day: '21', abe: 100 },
+      { day: '22', abe: 50 },
+      { day: '23', abe: 110 }
+    ]
+    var average = Datalist["results"].map(function (p) {
+      return p.abe;
+    });
+    // [ 60, 90, 100, 50, 110 ]
+    const result = average.indexOf(Math.min.apply(null, average));
+    // 3 (index)
+    console.log(Datalist["results"][result]["day"])
+    // 22
+    console.log(Math.min(...arr.map((p) => p.age))); // 18
+    ```
+
+1. 連想配列で”key”だけや”value”だけを取得する方法
+    
+    [参考資料](https://twotone.me/web/5329/)
