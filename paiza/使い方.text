@@ -1,0 +1,15 @@
+参考資料
+https://qiita.com/Toshihiro_Watanabe_/items/19e4b83bc9718451984f
+
+使いずら買ったので少し変更
+
+既にあるフォルダをコピーしてcase1.txtとmain.jsを変更
+case1.txtに標準入力
+main.jsにコードを記入
+
+ディレクトリの移動
+cd C005:アドレス調査
+
+実行コマンド
+node main < case1.txt
+
